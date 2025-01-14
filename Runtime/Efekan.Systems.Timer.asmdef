@@ -1,0 +1,14 @@
+{
+    "name": "Efekan.Systems.Timer",
+    "rootNamespace": "Efekan.Systems.Timer",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

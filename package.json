@@ -1,0 +1,21 @@
+{
+    "name": "com.efekan.timer",
+    "version": "1.0.0",
+    "displayName": "Timer",
+    "description": "Simple usefull timer.",
+    "unity": "2022.3",
+    "dependencies": {
+        "com.unity.textmeshpro": "3.0.9"
+    },
+    "author": {
+        "name": "Efekan Tugan",
+        "email": "efekantgn@gmail.com"
+    },
+    "samples": [
+        {
+            "displayName": "Sample Scene",
+            "description": "Sample Scene for timer.",
+            "path": "Samples~"
+        }
+    ]
+}
