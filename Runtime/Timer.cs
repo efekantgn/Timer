@@ -5,18 +5,47 @@ namespace Efekan.Systems.Timer
 
     public class Timer : MonoBehaviour
     {
-        public float Duration { get; private set; } // Timer süresi
-        public bool IsRunning { get; private set; } // Timer çalışıyor mu?
+        /// <summary>
+        /// Timer Süresi
+        /// </summary>
+        public float Duration { get; private set; }
+        /// <summary>
+        /// Timer çalışıyor mu?
+        /// </summary>
+        public bool IsRunning { get; private set; }
 
+        /// <summary>
+        /// Kalan süre
+        /// </summary>
         private float timeRemaining; // Kalan süre
 
-        // Action'lar
-        public Action OnStart;
-        public Action OnPause;
-        public Action OnResume;
-        public Action OnReset;
-        public Action OnComplete;
-        public Action<float> OnUpdate; // Kalan süreyi sağlayan güncelleme Action'ı
+
+        /// <summary>
+        /// Timer Başladığı zaman ateşleniyor.
+        /// </summary> 
+        public event Action OnStart;
+
+        /// <summary>
+        /// Timer Duraklatıldığı zaman ateşleniyor.
+        /// </summary> 
+        public event Action OnPause;
+        /// <summary>
+        /// Timer Devam ettiği zaman ateşleniyor.
+        /// </summary> 
+        public event Action OnResume;
+        /// <summary>
+        /// Timer Sıfırlandığı zaman ateşleniyor.
+        /// </summary> 
+        public event Action OnReset;
+        /// <summary>
+        /// Timer Tamamlandığı zaman ateşleniyor.
+        /// </summary> 
+        public event Action OnComplete;
+        /// <summary>
+        /// Timer Güncellendiği zaman ateşleniyor.
+        /// Kalan süreyi döndürüyor.
+        /// </summary>
+        public Action<float> OnUpdate;
 
         /// <summary>
         /// Timer'ı başlatır.
